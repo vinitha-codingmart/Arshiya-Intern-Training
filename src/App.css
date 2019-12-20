@@ -338,7 +338,7 @@ p {
     text-align: left;
     direction: ltr;
 }
-#middlepage .bubbles {
+#middlepage2 .bubbles {
   background: transparent url(./assets/7d2187bf.sprites_water.png) no-repeat -512px 0;
   bottom: 120px;
   height: 230px;
@@ -350,7 +350,7 @@ p {
     right: 10%;
     z-index:420
 }
-#middlepage .bubble-text {
+#middlepage2 .bubble-text {
   bottom: 100px;
   left: 44%;
   margin-left: -360px;

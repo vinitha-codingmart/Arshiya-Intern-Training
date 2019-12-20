@@ -42,6 +42,14 @@ function App() {
         </section>
         <div id="middlepage" class="name">
         <div id="diver">
+         
+
+        </div>
+
+        </div>
+        <div id="middlepage2" class="name">
+          <div id="bottle">
+          <input type="checkbox" id="bubble-text-visibility"></input>
           <section class="bubble-text">
             <div class="bubbles"></div>
             <header>
@@ -59,12 +67,6 @@ function App() {
             <div htmlFor="bubble-text-visibility" id="closebutton ir"></div>
           </footer>
           </section>
-
-        </div>
-
-        </div>
-        <div id="middlepage2" class="name">
-          <div id="bottle">
           </div>
         </div>
         <div id="middlepage3" class="name">
