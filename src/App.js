@@ -21,10 +21,11 @@ function App() {
         </header>
         <div id="main" role="main" >
         <div id="page">
-        <div id="whale" ></div>
-        <div id="gingerWhale" class="name">Ginger Whale</div>
-        {/* <div class="bubbles" ></div>
-        <section class="bubble text">
+        <label htmlFor="bubble-text-visibility" id="whale" ></label>
+        <label htmlFor="bubble-text-visibility" id="gingerWhale" class="name">Ginger Whale</label>
+        <input type="checkbox" id="bubble-text-visibility"></input>
+        <section class="bubble-text">
+        <div class="bubbles" ></div>
           <header>
             <h2> Ginger Whale interactive stories</h2>
           
@@ -35,9 +36,29 @@ function App() {
   
           </p>
           </header>
-        </section> */}
+          <footer>
+            <div htmlFor="bubble-text-visibility" id="closebutton ir"></div>
+          </footer>
+        </section>
         <div id="middlepage" class="name">
         <div id="diver">
+          <section class="bubble-text">
+            <div class="bubbles"></div>
+            <header>
+              <h2>support</h2>
+              <dl>
+    <dt>App support:</dt>
+    <dd><a href="mailto:support@gingerwhale.com" class="noPush">support@gingerwhale.com</a></dd>
+    <dt>Media &amp; general enquiries:</dt>
+    <dd><a href="mailto:info@gingerwhale.com" class="noPush">info@gingerwhale.com</a></dd>
+    <dt>Creative:</dt>
+    <dd><a href="mailto:james@gingerwhale.com" class="noPush">james@gingerwhale.com</a></dd>
+  </dl>
+            </header>
+            <footer>
+            <div htmlFor="bubble-text-visibility" id="closebutton ir"></div>
+          </footer>
+          </section>
 
         </div>
 
@@ -63,6 +84,9 @@ function App() {
        
         </div>
         </div>
+        <footer id="site-footer">
+          <p>website built by experience bureau</p>
+        </footer>
     </div>
   );
 }
