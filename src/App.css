@@ -1,38 +1,272 @@
-.App {
-  text-align: center;
+#siteHeader h1 {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 30px 0 10px;
+  font-family: sans-serif;
+  color: #444;
+  text-decoration: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#siteHeader h1 a{
+  color: #444;
+  text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#siteHeader {
+  background-color: #222;
+  border-bottom: 1px solid #111;
+  height: 30px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 500;
+  box-shadow: 2px 2px 4px 0 #2173a5;color: #ccc;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+#siteHeader nav {
+  display: inline;
+  font-size: 12px;
+  font-family: sans-serif;
+    color: #444;
+    line-height: 1.5em;
+}
+#siteHeader ul a {
+  font-size: 16px;
+  padding: 0 20px;
+  color: #ccc;
+  font-weight: 400;
+  line-height: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#siteHeader ul {
+  display: inline-flex;
+ list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    list-style-image: none;
+  
+}
+body {
+  min-height: 100vh;
+  position: fixed;
+  width:100%;
+}
+#page {
+  background-image: url(./assets/d43fb544.bg_water_top.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Annie Use Your Telescope',sans-serif;
+  font-size: 21px;
+  display: block;
+  position: fixed;
+  width:100%;
+}
+#whale {
+  /* background: transparent url(./assets/6fd4317d.sprites.png) no-repeat 0 -589px;
+  height: 214px;
+  width: 304px; */
+  background: transparent url(./assets/6fd4317d.sprites.png) no-repeat 0 -589px;
+    display: block;
+    height: 214px;
+    left: 30%;
+    position: absolute;
+    top: 10px;
+    width: 304px;
+    z-index: 301;
+    /* -webkit-animation: whaleSwim 2s ease-in-out .5s infinite alternate;
+    -moz-animation: whaleSwim 2s ease-in-out .5s infinite alternate; */
+    animation: whaleSwim 2s ease-in-out .5s infinite alternate;
+
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes whaleSwim {
+  0% {
+    left: 30%;
+    top: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+100% {
+    left: 31%;
+    top: 10px;
+}
+}
+#gingerWhale {
+  background: transparent url(./assets/6fd4317d.sprites.png) no-repeat 0 -808px;
+  display: block;
+  height: 111px;
+  left: 30%;
+  margin: 0 0 0 80px;
+  position: absolute;
+  top: 160px;
+  width: 299px;
+  z-index: 300;
+}
+.text {
+   border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  text-align: left;
+  direction: ltr;
+}
+#diver {
+  background: transparent url(./assets/6fd4317d.sprites.png) no-repeat -300px -244px;
+  bottom: 50px;
+  height: 344px;
+  width: 206px;
+  right: 10%;
+  display: block;
+  position: fixed;
+  z-index: 80;
+  animation: diverMoveDesktop 1.5s ease-in-out .25s infinite alternate;
+}
+#main {
+  margin-top: 30px;
+  position: relative;
+  display: block;
+}
+#middlepage {
+  height: 600px;
+}
+@keyframes  diverMoveDesktop  {
+  0% {
+    bottom: 50px;
+}
+100% {
+  bottom: 60px;
+}
+}
+#middlepage2 {
+  height: 10px;
+}
+#bottle {
+  background: transparent url(./assets/6fd4317d.sprites.png) no-repeat 0 0;
+  bottom: 90px;
+  height: 239px;
+  left: 44%;
+  position: fixed;
+  width: 163px;
+  z-index: 50;
+  animation: bottleMoveDesktop 1.5s ease-in-out .25s infinite alternate;
+}
+@keyframes  bottleMoveDesktop  {
+  0% {
+    bottom: 90px;
+    left: 44%;
+}
+100% {
+  bottom: 92px;
+    left: 44.5%;
+}
+}
+#middlepage3
+{
+  height: 10px;
+}
+#treasure {
+  background: transparent url(./assets/6fd4317d.sprites.png) no-repeat -180px 0;
+  bottom: 32px;
+  height: 235px;
+  left: 25px;
+  width: 307px;
+  z-index: 80;
+  -webkit-animation: chestMoveDesktop 2s ease-in-out .5s infinite alternate;
+  animation: treasureMoveDesktop 2s ease-in-out .5s infinite alternate;
+  position: fixed;
+  bottom: 0;
+}
+@keyframes  treasureMoveDesktop  {
+  0% {
+    bottom: 32px;
+    left: 25px;
+}
+100% {
+  bottom: 28px;
+    left: 28px;
+}
+}
+#background1 {
+  background: transparent url(./assets/d22eeade.foreground1.png) repeat-x 50% 100%;
+  bottom: 50px;
+  height: 556px;
+  position: fixed;
+  transform: scale(1);
+  z-index: 10;
+  width:100%
+}
+#background2 {
+  background: transparent url(./assets/3f0373e0.foreground2.png) repeat-x 50% 100%;
+  bottom:50px;
+  height: 520px;
+  position: absolute; 
+  transform:scale(1);
+   z-index: 40;
+   width: 100%;
+}
+#castle {
+  background: transparent url(./assets/6fd4317d.sprites.png) no-repeat 0 -244px;
+  bottom: 120px;
+  height: 331px;
+  width: 300px;
+  left: 21%;
+    position: absolute;
+    z-index: 30;
+}
+.corner_left {
+  background: transparent url(./assets/7d2187bf.sprites_water.png) no-repeat 0 -180px;
+  display: block;
+  height: 309px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 262px;
+  z-index: 5;
+}
+.corner_right {
+  background: transparent url(./assets/7d2187bf.sprites_water.png) no-repeat -256px -180px;
+  display: block;
+  height: 309px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 256px;
+  z-index: 5;
+}
+.left_light{
+  background: transparent url(./assets/b28c81ec.light1.png) no-repeat 0 0;
+  height: 400px;
+  left: 5%;
+  top: 10px;
+  width: 280px;
+  position:absolute;
+  
+}
+.right_light {
+  background: transparent url(./assets/b28c81ec.light1.png) no-repeat 0 0;
+  bottom: 240px;
+  height: 400px;
+  right: 10%;
+  width: 280px;
+  position: absolute;
+  
+}
+.leaf {
+  background: transparent url(./assets/6fd4317d.sprites.png) no-repeat -330px -589px;
+  height: 75px;
+  left: 80px;
+  top: 200px;
+  width: 87px;
+  position:absolute;
+  z-index: 40;
+}
+.bubbles {
+  background: transparent url(./assets/7d2187bf.sprites_water.png) no-repeat -260px 0;
+  height: 172px;
+  margin-left: 230px;
+  top: 110px;
+  width: 230px;
+  display: none;
+  position: absolute;
+  z-index: 420;
 }
