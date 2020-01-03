@@ -2,7 +2,9 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <script src="./script/function.js"></script>
+
 </head>
 
 <body>
@@ -52,322 +54,517 @@
                 </div>
             </div>
             <div class="right-content">
-                <a href="#">
-                    <label class="register-login" onclick="alert('asdfgf')" for="signup-form-visibility">REGISTER /
-            LOGIN</label>
-                </a>
+                <button id="myBtn">add</button>
+                <div id="myModal" class="modal1">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <h3>STUDENT REGISTRATION FORM</h3>
+                        <form name="formdata" id="form-1">
+
+
+                            <table>
+                                <tr>
+                                    <td>PROFILE</td>
+                                    <td>
+                                        <input type="file" name="pic" id="pic">
+                                    </td>
+                                </tr>
+
+                                <!----- First Name ---------------------------------------------------------->
+                                <tr>
+                                    <td>FIRST NAME</td>
+                                    <td><input type="text" name="First_Name" id="firstname" maxlength="30" />
+                                    </td>
+                                </tr>
+
+                                <!----- Last Name ---------------------------------------------------------->
+                                <tr>
+                                    <td>LAST NAME</td>
+                                    <td><input type="text" name="Last_Name" id="lastname" maxlength="30" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>DOB</td>
+                                    <td><input type="text" name="dob" id="dob" maxlength="30" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>UNIVERSITY</td>
+                                    <td><input type="text" name="university" id="university" maxlength="30" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>DEGREE</td>
+                                    <td><input type="text" name="degree" id="degree" maxlength="30" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>STREAM</td>
+                                    <td>
+                                        <select name="stream" id="stream">
+                                    <option value="-1">STREAM</option>
+                                    <option value="eie">EIE</option>
+                                    <option value="ece">ECE</option>
+                                    <option value="mechanical">MECHANICAL</option>
+
+                                    <option value="cse">CSE</option>
+                                    <option value="it">IT</option>
+                                  </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>YEAR OF PASSING</td>
+                                    <td>
+                                        <select name="yearofpassing" id="yearofpassing">
+                                  <option value="-1">YEAROFPASSING</option>
+                                  <option value="2020">2020</option>
+                                  <option value="2021">2021</option>
+                                  <option value="2022">2022</option>
+
+                                  <option value="2023">2023</option>
+                                  <option value="2024">2024</option>
+                                </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="submit" value="Submit"></input>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+
+                </div>
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+
+
+                <a href="../src/html/register.html" class="register-login">REGISTER / LOGIN
+                    </a>
+
                 <a href="#" class="submit">SUBMIT YOUR SITE!</a>
+
+
             </div>
         </div>
-    </div>
-    <!-- <input type="checkbox" id="signup-form-visibility">
-    <div class="signup-open"></div>
-    <div class="form">
+        <div class="main-content">
+            <div class="card-container">
 
-        <ul class="tab-group">
-            <li class="tab active"><a href="#signup">Sign Up</a></li>
-            <li class="tab"><a href="#login">Log In</a></li>
-        </ul>
+                <div class="card-row">
 
-        <div class="tab-content">
-            <div id="signup">
-                <h1>Sign Up for Free</h1>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
 
-                <form action="/" method="post">
-
-                    <div class="top-row">
-                        <div class="field-wrap">
-                            <label>
-                First Name<span class="req">*</span>
-              </label>
-                            <input type="text" required autocomplete="off" />
                         </div>
 
-                        <div class="field-wrap">
-                            <label>
-                Last Name<span class="req">*</span>
-              </label>
-                            <input type="text" required autocomplete="off" />
+                    </div>
+
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="field-wrap">
-                        <label>
-              Email Address<span class="req">*</span>
-            </label>
-                        <input type="email" required autocomplete="off" />
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="field-wrap">
-                        <label>
-              Set A Password<span class="req">*</span>
-            </label>
-                        <input type="password" required autocomplete="off" />
+                </div>
+
+                <div class="card-row">
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <button type="submit" class="button button-block">Get Started</button>
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
 
-                </form>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-row">
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-row">
+
+                    <div class="card">
+                        <div class="video" id="video1">
+                            <video id="videoplay" width="368" height="340" controls preload="auto">
+                      <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+                    
+                    </video>
+                            <div id="model1" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="content1">
+                                    <button id="close">X</button>
+                                    <!-- <span onclick="document.getElementById('model1').style.display='none'" class="close">&times;</span> -->
+                                    <video id="replay" controls preload="auto">
+                          <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+                        
+                        </video>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <!-- <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="video" id="video2">
+                            <video id="videoplay1" width="368" height="340" controls preload="auto">
+                  <source src=" https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
+                
+                </video>
+                            <div id="model2" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="content2">
+                                    <button id="close1">X</button>
+                                    <!-- <label id="close">X</label> -->
+                                    <!-- <span onclick="document.getElementById('model1').style.display='none'" class="close">&times;</span> -->
+                                    <video id="videoreplay" controls preload="auto">
+            <source src=" https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
+          
+          </video>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            niki louda
+                            <!-- <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+
+                        <!-- <div class="video" id="video3">
+                            <video id="videoplay" width="368" height="340" controls preload="auto">
+                          <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+                        
+                        </video>
+                            <div id="model3" class="modal">
+
+                                 Modal content -->
+                        <!-- <div class="modal-content3">
+                                     <span class="close">&times;</span> -->
+                        <!-- <video id="happy" controls preload="auto">
+                              <source src="http://techslides.com/demos/sample-videos/small.mp44" type="video/mp4">
+                            
+                            </video>
+                                </div>
+
+                            </div> -->
+                        <!-- <script>
+                                var hover = $(".video").hover(hoverVideo, hideVideo);
+
+                                function hoverVideo(e) {
+                                    $('video', this).get(0).play();
+                                }
+
+                                function hideVideo(e) {
+                                    $('video', this).get(0).pause();
+                                }
+                            </script>
+                            <script>
+                                var press1 = document.getElementById("video3");
+                                var modal3 = document.getElementById("model3");
+                                var played = document.getElementById("happy");
+                                // var span = document.getElementsByClassName("close")[0];
+                                press1.onclick = function() {
+                                    modal3.style.display = "block";
+                                    played.play();
+                                    hoverVideo.pause();
+                                }
+
+                                // span.onclick = function() {
+                                //     modal.style.display = "none";
+                                // }
+                                window.onclick = function(event) {
+                                    if (event.target == modal3) {
+                                        modal3.style.display = "none";
+                                    }
+                                }
+                            </script>
+
+                        </div> -->
+                        <div class="text-content">
+                            niki louda
+                            <!-- <div class="from">
+                                <p>from ukraine</p>
+                                <p>december 28 2019</p>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                </div>
+
 
             </div>
-
-            <div id="login">
-                <h1>Welcome Back!</h1>
-
-                <form action="/" method="post">
-
-                    <div class="field-wrap">
-                        <label>
-              Email Address<span class="req">*</span>
-            </label>
-                        <input type="email" required autocomplete="off" />
-                    </div>
-
-                    <div class="field-wrap">
-                        <label>
-              Password<span class="req">*</span>
-            </label>
-                        <input type="password" required autocomplete="off" />
-                    </div>
-
-                    <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-                    <button class="button button-block" />Log In</button>
-
-                </form>
-
-            </div>
-
         </div>
+
+        <div class="footer">
+            <div class="content-1">
+                <div class="info">
+                    <div class="slogan">The awards for design, creativity and innovation on the Internet</div>
+                    <div class="next-conf">Next Conferences <a href="#">Tokyo</a>, <a href="#">Amsterdam</a> and <a href="#">Toronto</a>
+                    </div>
+                </div>
+                <div class="links">
+                    <a href="#">Directory</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Winners</a>
+                    <a href="#">Nominees</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="social">
+                    Follow us
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Youtube</a>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="content-2">
+                <div class="links">
+                    <a href="#">Contact Us</a>
+                    <a href="#">F.A.Q</a>
+                    <a href="#">Cookies Policy</a>
+                    <a href="#">Legal Terms</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">English</a>
+                </div>
+                <div class="credits">
+                    Private Cloud by <a href="#">Stackscale</a>
+                </div>
+            </div>
+        </div>
+
+
         <script>
-            $('.form').find('input, textarea').on('keyup blur focus', function(e) {
+            var hover = $(".video").hover(hoverVideo, hideVideo);
 
-                var $this = $(this),
-                    label = $this.prev('label');
+            function hoverVideo(e) {
+                $('video', this).get(0).play();
+            }
 
-                if (e.type === 'keyup') {
-                    if ($this.val() === '') {
-                        label.removeClass('active highlight');
-                    } else {
-                        label.addClass('active highlight');
-                    }
-                } else if (e.type === 'blur') {
-                    if ($this.val() === '') {
-                        label.removeClass('active highlight');
-                    } else {
-                        label.removeClass('highlight');
-                    }
-                } else if (e.type === 'focus') {
+            function hideVideo(e) {
+                $('video', this).get(0).pause();
+            }
+            var press = document.getElementById("video1");
+            var modal1 = document.getElementById("model1");
+            var play1 = document.getElementById("replay");
+            var close = document.getElementById("close");
+            var chinna = document.getElementById("videoplay");
 
-                    if ($this.val() === '') {
-                        label.removeClass('highlight');
-                    } else if ($this.val() !== '') {
-                        label.addClass('highlight');
-                    }
-                }
+            press.onclick = function() {
+                modal1.style.display = "block";
+                play1.play();
+                chinna.pause();
+            }
+            window.addEventListener("click", function(event) {
 
-            });
+                if (event.target == press) {
+                    modal1.style.display = "block";
+                } else if (event.target == close)
+                    modal1.style.display = "none"
 
-            $('.tab a').on('click', function(e) {
-
-                e.preventDefault();
-
-                $(this).parent().addClass('active');
-                $(this).parent().siblings().removeClass('active');
-
-                target = $(this).attr('href');
-
-                $('.tab-content > div').not(target).hide();
-
-                $(target).fadeIn(600);
-
-            });
-        </script> -->
-    </div>
-
-    <div class="main-content">
-        <div class="card-container">
-
-            <div class="card-row">
-
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
-
-                    </div>
-
-                </div>
+            })
 
 
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
+            var hover = $(".video").hover(hoverVideo, hideVideo);
 
-                    </div>
-                </div>
+            function hoverVideo(e) {
+                $('video', this).get(0).play();
+            }
 
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
+            function hideVideo(e) {
+                $('video', this).get(0).pause();
+            }
+            var press1 = document.getElementById("video2");
+            var modal2 = document.getElementById("model2");
+            var play2 = document.getElementById("videoreplay");
+            var close1 = document.getElementById("close1");
+            var chinna2 = document.getElementById("videoplay1");
 
-                    </div>
-                </div>
+            press1.onclick = function() {
+                modal2.style.display = "block";
+                play2.play();
+                chinna2.pause();
 
-            </div>
+            }
+            window.addEventListener("click", function(event) {
+                if (event.target == press1) {
+                    modal2.style.display = "block";
+                } else if (event.target == close1)
+                    modal2.style.display = "none"
 
-            <div class="card-row">
+            })
 
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
+            window.onload = () => {
+                document.querySelector("#form-1").addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    link()
+                })
+            }
+        </script>
 
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
 
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="card-row">
-
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="image">
-                        <img src="./assets/5dee5ee3e570f954149163.jpg" alt="">
-                    </div>
-                    <div class="text-content">
-                        niki louda
-                        <div class="from">
-                            <p>from ukraine</p>
-                            <p>december 28 2019</p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="content-1">
-            <div class="info">
-                <div class="slogan">The awards for design, creativity and innovation on the Internet</div>
-                <div class="next-conf">Next Conferences <a href="#">Tokyo</a>, <a href="#">Amsterdam</a> and <a href="#">Toronto</a>
-                </div>
-            </div>
-            <div class="links">
-                <a href="#">Directory</a>
-                <a href="#">Jobs</a>
-                <a href="#">About Us</a>
-                <a href="#">Winners</a>
-                <a href="#">Nominees</a>
-                <a href="#">Blog</a>
-            </div>
-            <div class="social">
-                Follow us
-                <a href="#">Twitter</a>
-                <a href="#">Facebook</a>
-                <a href="#">Youtube</a>
-            </div>
-        </div>
-        <hr class="divider">
-        <div class="content-2">
-            <div class="links">
-                <a href="#">Contact Us</a>
-                <a href="#">F.A.Q</a>
-                <a href="#">Cookies Policy</a>
-                <a href="#">Legal Terms</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">English</a>
-            </div>
-            <div class="credits">
-                Private Cloud by <a href="#">Stackscale</a>
-            </div>
-        </div>
-    </div>
 </body>
+
+
 
 </html>

@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../index.css" type="text/css" />
+</head>
+
+<body>
+    <div class="forms">
+        <ul class="tab-group">
+            <li class="tab active"><a href="#login">Log In</a></li>
+            <li class="tab"><a href="#signup">Sign Up</a></li>
+        </ul>
+        <form action="#" id="login">
+            <h1>Login </h1>
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input id="login-email" type="email" name="email" required="email" />
+                <label for="password">Password</label>
+                <input id="login-password" type="password" name="password" required/>
+                <input type="submit" value="Login" class="button" />
+                <p class="text-p"> <a href="#">Forgot password?</a> </p>
+            </div>
+        </form>
+        <form action="#" id="signup">
+            <h1>Sign Up</h1>
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input id="signup-email" type="email" name="email" required="email" />
+                <label for="password">Password</label>
+                <input id="signup-password" type="password" name="password" pattern=".{6,}" required/>
+                <label for="password">Confirm Password 
+                    <span id='message1'></span>
+                </label>
+                <input id="signup-password2" type="password" name="password" pattern=".{6,}" required/>
+
+                <input type="submit" value="Sign up" class="button" />
+
+        </form>
+        </div>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script>
+            $('#signup-password, #signup-password2').on('keyup', function() {
+                if ($('#signup-password').val() == $('#signup-password2').val()) {
+                    $('#message1').html('Matching').css('color', 'green');
+                } else
+                    $('#message1').html('Not Matching').css('color', 'red');
+            });
+        </script>
+        </script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
+        <div id="message">
+            <h3>Password must contain the following:</h3>
+            <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+        </div>
+        <script>
+            var myInput = document.getElementById("signup-password");
+            var length = document.getElementById("length");
+
+            // When the user clicks on the password field, show the message box
+            myInput.onfocus = function() {
+                document.getElementById("message").style.display = "block";
+            }
+
+            // When the user clicks outside of the password field, hide the message box
+            myInput.onblur = function() {
+                document.getElementById("message").style.display = "none";
+            }
+
+            // When the user starts to type something inside the password field
+            myInput.onkeyup = function() {
+
+                // Validate length
+                if (myInput.value.length >= 8) {
+                    length.classList.remove("invalid");
+                    length.classList.add("valid");
+                } else {
+                    length.classList.remove("valid");
+                    length.classList.add("invalid");
+                }
+            }
+        </script>
+
+
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.tab a').on('click', function(e) {
+                    e.preventDefault();
+
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active');
+
+                    var href = $(this).attr('href');
+                    $('.forms > form').hide();
+                    $(href).fadeIn(500);
+                });
+            });
+        </script>
+    </div>
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCSq6B11FsL1u10Z0OR8i2A46jeLU1mWBI",
+        authDomain: "aards-1649a.firebaseapp.com",
+        databaseURL: "https://aards-1649a.firebaseio.com",
+        projectId: "aards-1649a",
+
+        appId: "1:701219016220:web:c5ddf1b303888f40fc19d9",
+        measurementId: "G-6NM8Q8PL5E"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // firebase.analytics();
+    const auth = firebase.auth();
+</script>
+<script src="../script/auth.js"></script>
+
+</html>
